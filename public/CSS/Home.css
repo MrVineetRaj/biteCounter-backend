@@ -1,0 +1,287 @@
+*{
+    box-sizing: border-box;
+}
+
+hr{
+    border: 2px solid var(--color-3);
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    overflow-x: hidden;
+    font-size: 20px;
+    position:relative;
+    background: var(--color-5);
+    color: var(--text-color-2);
+}
+.intro{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-4);
+    top:0;
+    color:var(--color-4);
+    z-index: 5;
+
+}
+.intro h1{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    width: 30%;
+    text-align: center;
+    font-size: 60px;
+    opacity: 0;
+    color: #fff188;
+}
+.intro h1:nth-child(1){
+    animation: display 1.8s 0s;
+}
+.intro h1:nth-child(2){
+    animation: display 1.8s 2s ;
+}
+.intro h1:nth-child(3){
+    animation: display 2s 4s;
+}
+
+.intro{
+    animation :introUp 3s 5s forwards;
+}
+.fa{
+    color: white;
+    cursor: pointer;
+}
+header{
+    position: sticky;
+    background: var(--header-color-1);
+    color: white;
+    display: flex;
+    width: 100vw;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+header h1{
+    color: var(--color-2);
+    margin: 0 0 0 10%;
+}
+
+header .fullMenu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* background-color: red; */
+    margin: 0 15% 0 0;
+}
+header .fullMenu .menu{
+    background-color: var(--color-1);
+    width: 250px;
+    height: auto;
+    padding: 20px;
+    position: absolute;
+    top: 50px;
+    border-top: 5px var(--color-2) solid;
+
+}
+header .fullMenu .menu form input{
+    padding:5px 10px;
+
+}
+header .fullMenu .menu div{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+header .fullMenu .menu div .fa{
+    margin: 0 10px 0 0;
+}
+header .fullMenu .menu div p{
+    cursor: pointer;
+}
+
+header .fullMenu .fa-times.inactive{
+    display: none;
+}
+header .fullMenu .fa-times.active{
+    display: block;
+}
+header .fullMenu .fa-bars.inactive{
+    display: none;
+}
+header .fullMenu .fa-bars.active{
+    display: block;
+}
+
+header .fullMenu .menu.active{
+    left: 0px;
+    transition: left 1s 0s;
+}
+header .fullMenu .menu.inactive{
+    left: 250px;
+    transition: left 1s 0s;
+}
+
+
+
+
+
+header .fullMenu .menu .userProfile{
+    position: relative;
+    z-index: 100;
+}
+header .fullMenu .menu .profile{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    top: 50px;
+    left: 250px;
+    color: var(--color-1);
+    background-color: rgb(59, 59, 59);
+    border-top: 5px solid var(--color-3);
+    
+}
+header .fullMenu .menu .profile .fa{
+    color: var(--color-2);
+}
+
+header .fullMenu .menu .profile.active{
+    left: -15px;
+    transition: left 2s 0s;
+}
+header .fullMenu .menu .profile.inactive{
+    left: 240px;
+    transition: left 2s 0s;
+}
+
+
+
+
+
+
+
+.container{
+    background:var(--color-6);
+    width: 80vw;
+    margin: 80px 0;
+    border: 2px solid var(--color-3);
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(0,0,0,0.1);
+    height: auto;
+    padding: 30px;
+}
+.container .top{
+    display: flex;
+    float: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .top #addTask{
+    height: 50px;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    background-color: steelblue;
+    color: var(--text-color-2);
+    border-radius: 13px;
+}
+.container table{
+    /* background-color: red; */
+    width: 100%;
+    /* margin: 80px 0; */
+    border: 2px solid var(--color-3);
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(0,0,0,0.1);
+    height: auto;
+    /* padding: 10px; */
+    text-align: center;
+}
+.container table td{
+    padding: 10px;
+}
+.container table #sNo{
+    /* background-color: red; */
+    width: 5%;
+    margin: 0;
+    border: 1px solid black;
+}
+.container table #taskName{
+    /* background-color: red; */
+    border: 1px solid black;
+    width: 15%;
+}
+.container table #taskDescription{
+    /* background-color: red; */
+    border: 1px solid black;
+    width: 24%;
+}
+.container table #completed{
+    /* background-color: red; */
+    border: 1px solid black;
+    width: 10%;
+}
+.container table #taskAdded{
+    /* background-color: red; */
+    border: 1px solid black;
+    width: 8%;
+    /* background-color: red; */
+}
+.container table #taskToBeCompleted{
+    /* background-color: red; */
+    border: 1px solid black;
+    width: 10%;
+    /* background-color: red; */
+}
+.container table #taskCompleted{
+    /* background-color: red; */
+    border: 1px solid black;
+    width: 10%;
+    text-align: center;
+    /* background-color: red; */
+}
+
+
+.addTaskForm form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--color-3);
+    padding: 30px;
+    border-radius: 10px;
+    position: absolute;
+    top: 260px;
+    left: 1600px;
+    z-index:4;
+}
+.addTaskForm form input,.addTaskForm form textarea{
+    margin: 10px 0;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 10px;
+}
+.addTaskForm form button{
+    
+    height: 50px;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    background-color: steelblue;
+    color: var(--text-color-2);
+    border-radius: 13px;
+    width: 40%;
+}
+
+.addTaskForm form.active{
+    left: 900px;
+    transition: left 2s 0s;
+}
+.addTaskForm form.inactive{
+    left: 1600px;
+    transition: left 2s 0s;
+}

@@ -1,0 +1,40 @@
+:root{
+    --color-1:hsl(0, 0%, 0%);
+    --color-2:white;
+    --color-3:grey;
+    --color-4:linear-gradient(to right,rgb(27, 25, 47),#2f5879);
+    --color-5:linear-gradient(to right,#2f5879,rgb(82, 162, 228));
+    --color-6:rgb(0,0,0,0.4);
+    --text-color-1:black;
+    --text-color-2:white;
+    --text-color-3:blue;
+    --button-color-1:rgb(255, 162, 0);
+    --header-color-1:linear-gradient(to right,rgb(27, 25, 47),rgb(82, 162, 228));
+}
+
+button:active{
+    transform: scale(0.6);
+}
+
+
+@keyframes display {
+    0%{
+        opacity: 0;
+    }
+    
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes introUp {
+    0%{
+        top: 0vh;
+    }
+    100%{
+        top: -200vh;
+    }
+}
