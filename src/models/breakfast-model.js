@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const request = require('request');
-const my_api_key = 'C/aE49mYEDE7Jmxz9M7stg==LYGdHXVy9RNDXTlD';
+const API = process.env.API;
 const breakfastSchema = mongoose.Schema({
 
     owner: {
@@ -28,7 +28,7 @@ breakfastSchema.statics.fetchNutritionData = (query) => {
         request.get({
             url: 'https://api.calorieninjas.com/v1/nutrition?query=' + query,
             headers: {
-                'X-Api-Key': my_api_key
+                'X-Api-Key': API
             },
         }, (error, response, body) => {
             if (error) {

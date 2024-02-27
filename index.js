@@ -7,8 +7,9 @@ const lunchRouter = require('./src/Router/lunch-router')
 const breakfastRouter = require('./src/Router/breakfast-router')
 const dinnerRouter = require('./src/Router/dinner-router')
 const app = express();
-const port = 3000;
-const uri = "http://127.0.0.1"
+const BASE_URL = process.env.BASE_URL;
+const port = process.env.PORT||6010;
+
 
 
 app.use(cors());
@@ -26,5 +27,5 @@ app.use(breakfastRouter)
 app.use(dinnerRouter)
 
 app.listen(port,()=>{
-    console.log(`Server is up on ${uri}:${port}`) 
+    console.log(`Server is up on ${BASE_URL}:${port}`) 
 })

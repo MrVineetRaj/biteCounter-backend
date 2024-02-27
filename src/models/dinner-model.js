@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const request = require('request');
-const my_api_key = 'C/aE49mYEDE7Jmxz9M7stg==LYGdHXVy9RNDXTlD';
+const my_api_key = process.env.API;
 const dinnerSchema = mongoose.Schema({
     owner: {
         type: mongoose.Schema.Types.ObjectId,
