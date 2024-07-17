@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/Login.css" />
+    <link rel="stylesheet" href="../CSS/utils.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <title>Track Your Task</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>biteCounter</h1>
+    </header>
+
+    <div class="slides">
+      <div class="slide1 inactive">
+        <div>
+          <form action="/user/login" method="POST" id="login-form">
+            <legend><h1>Login</h1></legend>
+            <input type="text" name="email" placeholder="Email *" required />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password *"
+              required
+            />
+            <button type="submit">Login</button>
+            <p>
+              Not registered yet ? <span id="loginToSignUp"> click Here</span>
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <div class="slide2 active">
+        <div>
+          <form action="/user/signup" method="POST">
+            <legend><h1>Register</h1></legend>
+            <input type="text" name="name" placeholder="Name *" required />
+            <input type="email" name="email" placeholder="Email *" required />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password *"
+              required
+            />
+            <input type="number" name="age" placeholder="Age " />
+            <input
+              type="number"
+              name="weight"
+              placeholder="Weight *"
+              required
+            />
+            <input
+              type="number"
+              name="height"
+              placeholder="Height *"
+              required
+            />
+            <select name="activity">
+              <option value="">--Select Level of acitvity--</option>
+              <option value="low">Low</option>
+              <option value="moderate">Moderate</option>
+              <option value="high">High</option>
+            </select>
+            <button type="submit">SignUp</button>
+            <p>
+              Already registered yet ?
+              <span id="signUpToLogin"> click Here</span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="../javascript/login-style.js"></script>
+    <script src="../javascript/login-script.js"></script>
+  </body>
+</html>

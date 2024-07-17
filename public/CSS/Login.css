@@ -1,0 +1,203 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    overflow: hidden;
+    font-size: 20px;
+    height: 100vh;
+}
+
+header{
+    background: var(--header-color-1);
+}
+header h1{
+    color: var(--color-2);
+    width: 100vw;
+    margin: 10px 0 10px 8%;
+}
+.slides{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    color: white;
+    /* background-color: yellow; */
+}
+.slides .slide1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    background: var(--color-4);
+}
+.slides .slide2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    background: var(--color-5);
+}
+.slides .slide1 form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 80vh; */
+}
+.slides .slide1 form input{
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: 0;
+    font-size: 0.8em;
+}
+.slides .slide1 form button{
+    width: 40%;
+    padding: 10px 20px;
+    margin: 35px 0px 5px 0;
+    background-color: var(--button-color-1);
+    color:var(--text-color-2);
+    font-size: 0.8em;
+    font-weight: bold;
+    border: 0;
+    border-radius: 10px;
+}
+.slides .slide1 form p{
+    width: 100%;
+    color:var(--text-color-2);
+    font-size: 1em;
+}
+.slides .slide1 form p #loginToSignUp{
+    width: 100%;
+    color:var(--color-5);
+    font-weight: bolder;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+/*  */
+.slides .slide2 form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slides .slide2 form input,
+.slides .slide2 form select{
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: 0;
+    font-size: 0.6em;
+}
+.slides .slide2 form button{
+    width: 40%;
+    padding: 10px 20px;
+    margin: 35px 0px 5px 0;
+    background-color: var(--button-color-1);
+    color:var(--text-color-2);
+    font-size: 0.8em;
+    font-weight: bold;
+    border: 0;
+    border-radius: 10px;
+}
+.slides .slide2 form p{
+    width: 100%;
+    color:var(--text-color-2);
+    font-size: 1em;
+}
+.slides .slide2 form p #signUpToLogin{
+    width: 100%;
+    color:var(--color-4);
+    font-weight: bolder;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+.slide1.inactive{
+    width: 0%;
+    transition: width 2s;
+}
+.slide1.active{
+    width:100%;
+    transition: width 2s;
+}
+.slide2.inactive{
+    width: 0%;
+    transition: width 2s;
+}
+.slide2.active{
+    width:100%;
+    transition: width 2s;
+}
+.slide1.inactive div > form{
+    opacity: 0;
+    transition: opacity 2s;
+}
+.slide1.active > form{
+    opacity: 1;
+    transition: opacity 2s;
+    
+}
+.slide2.inactive div > form{
+    opacity: 0;
+    transition: opacity 2s;
+}
+.slide2.active > form{
+    opacity: 1;
+    transition: opacity 2s;
+}
+.form_control{
+    position: relative;
+    margin: 10px 0;
+    width: 300px;
+}
+
+.form_control input{
+    background-color: white;
+    border: 0;
+    border-bottom: 2px white solid;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 25px;
+    color: black;
+}
+
+.form_control input:focus,
+.form_control input:valid{
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form_control label{
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    color: black;
+    font-weight: bold;
+}
+
+.form_control label span{
+    display: inline-block;
+    font-size: 0.8em;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68,-0.555,0.265,1.55);
+}
+
+.form_control input:focus + label span,
+.form_control input:valid + label span{
+    color: white;
+    transform:translateY(-30px);
+}
+
